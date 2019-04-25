@@ -88,8 +88,6 @@ typedef unsigned __int32 uint32_t;
     size_t i;\
     uint8_t fixed_key[16];\
     memcpy(fixed_key, key, 16);\
-    for (i = 0; (i < 16) && (fixed_key[i] != 0); ++i);\
-    for (++i; i < 16; ++i) fixed_key[i] = 0;\
 
 
 static uint32_t * xxtea_to_uint_array(const uint8_t * data, size_t len, int inc_len, size_t * out_len) {
